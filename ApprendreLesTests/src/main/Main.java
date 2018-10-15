@@ -7,6 +7,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
+		// modif du MAIN pour tester eGit
 
 		// creation d'un HashSet
 		HashSet<Integer> Hash = Main.createHash(11);
