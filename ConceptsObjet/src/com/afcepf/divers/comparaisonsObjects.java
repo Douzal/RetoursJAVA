@@ -31,12 +31,18 @@ public class comparaisonsObjects {
 		testEqualsString(s1, s2);
 		
 		System.out.println("\n\n\t--COMPARAISON DE INTEGERS---");
-		// test sur des integers
+		System.out.println("\nCAS 1 - test sur int (type primitif !)");
+		// CAS 1 - test sur int (type primitif !)
 		int n1 = Integer.valueOf(JOptionPane.showInputDialog("Choix entier n°1 ?"));
 		int n2 = Integer.valueOf(JOptionPane.showInputDialog("Choix d\'un entier ?"));
 		n1 = n2;
-		testEqualsInteger(n1, n2);
+		testEqualsInt_typePrimitf(n1, n2);
 		
+		// CAS 2 - Integer (reference type)
+		System.out.println("\nCAS 2 - Integer (reference type)");
+		Integer n = 5;
+		Integer m = 5;
+		testEqualsInteger(n, m);
 		
 		System.out.println("\n\n\t--COMPARAISON D'OBJETS---");
 		System.out.println("\nCAS 1 - Comparaison de deux nouvelles instances aux parametres identiques");
@@ -55,10 +61,16 @@ public class comparaisonsObjects {
 		System.out.println("== fonctionne  ? " + (s == s2));
 	}
 	
-	// methode de tests des integer
-	public static void testEqualsInteger(int a, int b ) {
+	// methode de tests des int TYPE PRIMITIF
+	public static void testEqualsInt_typePrimitf(int a, int b ) {
 		System.out.println("Integer.compare fonctionne  ? " + Integer.compare(a, b));
 		System.out.println("== fonctionne  ? " + (a==b));
+	}
+	// methode de tests des integer TYPE REFERENCE
+	public static void testEqualsInteger(Integer a, Integer b ) {
+		System.out.println("Integer.compare(a, b) : ? " + Integer.compare(a, b));
+		System.out.println("== fonctionne  ? " + (a==b));
+		System.out.println("a.equals(b) fonctionne ? " + a.equals(b));
 	}
 	
 	// methode de tests sur des Objets
